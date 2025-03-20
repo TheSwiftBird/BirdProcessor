@@ -1,6 +1,5 @@
 #import "BirdProcessor-Swift.h"
 #import "ViewController.h"
-#import "WordProcessor.h"
 
 @interface ViewController ()
 
