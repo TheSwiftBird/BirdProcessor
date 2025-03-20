@@ -11,12 +11,10 @@
         let isEmpty = stringManipulator.isEmpty(string)
         let isEmptyResult = isEmpty ? "is" : "is not"
         
-        var numberOfWordsResult = ""
-        if stringManipulator.responds(to: #selector(StringManipulatorProtocol.numberOfWords(in:))) {
-            // Note the ! before the arguments:
-            let numberOfWords = stringManipulator.numberOfWords!(in: string)
-            numberOfWordsResult = "\(numberOfWords) word(s) and "
-        }
+        // Note the ? before the arguments:
+        let numberOfWordsResult = if let numberOfWords = stringManipulator.numberOfWords?(in: string) {
+            "\(numberOfWords) word(s) and "
+        } else { "" }
         
         let numberOfCharacters = stringManipulator.numberOfCharacters(in: string)
         let numberOfCharactersResult = "\(numberOfCharacters) character(s)"
