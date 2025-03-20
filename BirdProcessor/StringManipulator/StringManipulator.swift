@@ -1,7 +1,13 @@
-class StringManipulator { }
+@objc class StringManipulator: NSObject { }
 
-// TODO: Implement the protocol
-
-//extension StringManipulator: StringManipulatorProtocol {
-//    
-//}
+extension StringManipulator: StringManipulatorProtocol {
+    
+    func isEmpty(_ string: String) -> Bool {
+        string.isEmpty
+    }
+    
+    func numberOfCharacters(in string: String) -> Int {
+        string.count
+    }
+    
+}

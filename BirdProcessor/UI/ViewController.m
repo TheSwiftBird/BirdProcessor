@@ -1,3 +1,4 @@
+#import "BirdProcessor-Swift.h"
 #import "ViewController.h"
 #import "WordProcessor.h"
 
@@ -15,7 +16,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // TODO: Create an instance of `WordProcessor` and assign it to the property
+    id<StringManipulatorProtocol> stringManipulator = [[StringManipulator alloc] init];
+    self.wordProcessor = [[WordProcessor alloc] initWithStringManipulator:stringManipulator];
 }
 
 - (IBAction)didTapProcessButton:(UIButton *)sender {
