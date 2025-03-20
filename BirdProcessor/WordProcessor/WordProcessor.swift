@@ -10,11 +10,11 @@
     }
     
     @objc func processInputString(_ string: String) -> String {
-        delegate?.wordProcessor(self, didBeginProcessingInput: string)
+        delegate?.wordProcessor?(self, didBeginProcessingInput: string)
         // This runs *after* the resulting string is constructed
         // but *before* control is returned to the caller—
         // in other words, when processing is truly finished
-        defer { delegate?.wordProcessor(self, didFinishProcessingInput: string) }
+        defer { delegate?.wordProcessor?(self, didFinishProcessingInput: string) }
         
         let isEmpty = stringManipulator.isEmpty(string)
         let isEmptyResult = isEmpty ? "is" : "is not"
@@ -25,7 +25,7 @@
         } else { "" }
         
         if numberOfWordsResult.isEmpty {
-            delegate?.wordProcessor(self, didEncounterError: "Cannot count words")
+            delegate?.wordProcessor?(self, didEncounterError: "Cannot count words")
         }
         
         let numberOfCharacters = stringManipulator.numberOfCharacters(in: string)

@@ -28,15 +28,7 @@
     [self.resultLabel setText:processingResult];
 }
 
-// We’re only interested in the third method, but the compiler requires all three:
-
-- (void)wordProcessor:(WordProcessor *)processor didBeginProcessingInput:(NSString *)string {
-    
-}
-
-- (void)wordProcessor:(WordProcessor *)processor didFinishProcessingInput:(NSString *)string {
-    
-}
+// We can implement only the method that we actually need:
 
 - (void)wordProcessor:(WordProcessor *)processor didEncounterError:(NSString *)error {
     // Show an error alert
