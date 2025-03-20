@@ -24,8 +24,11 @@
     BOOL isEmpty = [self.stringManipulator isEmptyString:string];
     NSString *isEmptyResult = isEmpty ? @"is" : @"is not";
     
-    NSInteger numberOfWords = [self.stringManipulator numberOfWordsInString:string];
-    NSString *numberOfWordsResult = [NSString stringWithFormat:@"%ld word(s) and ", numberOfWords];
+    NSString *numberOfWordsResult = @"";
+    if ([self.stringManipulator respondsToSelector:@selector(numberOfWordsInString:)]) {
+        NSInteger numberOfWords = [self.stringManipulator numberOfWordsInString:string];
+        numberOfWordsResult = [NSString stringWithFormat:@"%ld word(s) and ", numberOfWords];
+    }
     
     NSInteger numberOfCharacters = [self.stringManipulator numberOfCharactersInString:string];
     NSString *numberOfCharactersResult = [NSString stringWithFormat:@"%ld character(s)", numberOfCharacters];
