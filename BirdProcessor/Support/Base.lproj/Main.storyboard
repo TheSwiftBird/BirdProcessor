@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Enter some text…" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oDy-kR-Nu6">
+                                <rect key="frame" x="16" y="59" width="361" height="334"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmA-UO-Yoy">
+                                <rect key="frame" x="154" y="409" width="85" height="34.333333333333314"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Process"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Process"/>
+                                <connections>
+                                    <action selector="didTapProcessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cwX-O3-U9h"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Processing result will be here…" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbO-lM-96D">
+                                <rect key="frame" x="16" y="475.33333333333331" width="361" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xmA-UO-Yoy" firstAttribute="top" secondItem="oDy-kR-Nu6" secondAttribute="bottom" constant="16" id="3Ys-8s-Ueg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oDy-kR-Nu6" secondAttribute="trailing" id="BG6-FV-ait"/>
+                            <constraint firstItem="EbO-lM-96D" firstAttribute="top" secondItem="xmA-UO-Yoy" secondAttribute="bottom" constant="32" id="Rnt-jN-NMB"/>
+                            <constraint firstItem="oDy-kR-Nu6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TtJ-HD-WSc"/>
+                            <constraint firstItem="EbO-lM-96D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WUB-HO-yvc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EbO-lM-96D" secondAttribute="trailing" id="XMU-J9-PIJ"/>
+                            <constraint firstItem="xmA-UO-Yoy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aGy-uA-KLo"/>
+                            <constraint firstItem="oDy-kR-Nu6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iUW-xy-XKj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EbO-lM-96D" secondAttribute="bottom" id="jcK-KO-IP0"/>
+                            <constraint firstItem="xmA-UO-Yoy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tOl-QN-akS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputTextField" destination="oDy-kR-Nu6" id="y9a-QS-Nl0"/>
+                        <outlet property="resultLabel" destination="EbO-lM-96D" id="DEm-6l-PlN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -5,7 +5,7 @@ This is a demo project for [the video](https://yakovmanshin.com/2025/03/swift-an
 You’ll find different stages of the project in separate branches.
 
 ## Tasks
-* [ ] Create a starter project
+* [x] Create a starter project
 * [ ] Implement the Objective-C protocol (`StringManipulatorProtocol`) in the Swift object (`StringManipulator`)
 * [ ] Fix the crash that occurs when the non-implemented optional method is called
 * [ ] Replace `WordProcessor` with a Swift version and use the better way to handle the optional method
